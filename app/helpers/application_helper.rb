@@ -99,7 +99,7 @@ module ApplicationHelper
 
   #----------------------------------------------------------------------------
   def link_to_edit(model)
-    name = model.class.name.downcase
+    name = model.class.name.underscore.downcase
     link_to_remote(t(:edit),
       :method => :get,
       :url    => send("edit_#{name}_path", model),
@@ -109,7 +109,7 @@ module ApplicationHelper
 
   #----------------------------------------------------------------------------
   def link_to_delete(model)
-    name = model.class.name.downcase
+    name = model.class.name.underscore.downcase
     link_to_remote(t(:delete) + "!",
       :method => :delete,
       :url    => send("#{name}_path", model),
