@@ -2,14 +2,10 @@
 <IfModule passenger_module>
 	<VirtualHost *:80>
 	  ServerName crm.asterislabs.com
-        ServerAlias assets0.asterislabs.com
-        ServerAlias assets1.asterislabs.com
-        ServerAlias assets2.asterislabs.com
-        ServerAlias assets3.asterislabs.com
 
-	  DocumentRoot "/opt/apps/AsterisLabs is Fat Free/current/public"
-	  CustomLog /var/log/apache2/AsterisLabs is Fat Free-access.log combined
-	  ErrorLog /var/log/apache2/AsterisLabs is Fat Free-error.log
+	  DocumentRoot "/opt/apps/asteris_labs_crm/current/public"
+	  CustomLog /var/log/apache2/asteris_labs_crm-access.log combined
+	  ErrorLog /var/log/apache2/asteris_labs_crm-error.log
 	  
 	  RailsEnv production
 	  # RailsAllowModRewrite off
@@ -20,7 +16,7 @@
 	  RewriteCond %{DOCUMENT_ROOT}/system/maintenance.html -f
 	  RewriteCond %{SCRIPT_FILENAME} !maintenance.html
       RewriteRule ^.*$ /system/maintenance.html [L]
-	  <Directory "/opt/apps/AsterisLabs is Fat Free/current/public">
+	  <Directory "/opt/apps/asteris_labs_crm/current/public">
 	    Order allow,deny
 	    Allow from all
 	  </Directory>
