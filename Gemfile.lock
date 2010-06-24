@@ -1,0 +1,27 @@
+--- 
+dependencies: 
+  rails: 
+    group: 
+    - :default
+    version: = 2.3.5
+specs: 
+- rake: 
+    version: 0.8.7
+- activesupport: 
+    version: 2.3.5
+- rack: 
+    version: 1.0.1
+- actionpack: 
+    version: 2.3.5
+- actionmailer: 
+    version: 2.3.5
+- activerecord: 
+    version: 2.3.5
+- activeresource: 
+    version: 2.3.5
+- rails: 
+    version: 2.3.5
+hash: da2882136c1454f31731ce8a9b5953fcf7a2c3b1
+sources: 
+- Rubygems: 
+    uri: http://rubygems.org

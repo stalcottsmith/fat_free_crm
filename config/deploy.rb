@@ -37,6 +37,7 @@ after "deploy:symlink" do
   sudo "chown -R app_#{application}:app_#{application} #{release_path}"
   # sudo "ln -nfs #{release_path}/config/getmailrc #{deploy_to}/.getmail"
   run <<-CMD
+    bundle install &&
     ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml
   CMD
 end
